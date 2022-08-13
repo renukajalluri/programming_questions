@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Number Guessing Game</title>
+  
+    <style>
+        html {
+    font-family: sans-serif;
+    }
+      
+        body {
+    width: 50%;
+    max-width: 800px;
+    min-width: 480px;
+    margin: 0 auto;
+    }
+    </style>
+</head>
+  
+<body>
+<h1>Guess The Number</h1>
+    
+<div class="form">
+    <label for="guessField">Enter a number: </label>
+    <input type = "text" id = "guessingNumber">
+    <input type = "submit" value = "Submit guess" 
+            id = "submittingGuessNum">
+</div>
+  
+<script type = "text/javascript">
+  
+    var y = Math.floor(Math.random() * 30 + 1);
+      
+    //   console.log(y)
+    document.getElementById("submittingGuessNum").onclick = function(){
+      
+      
+   var x = document.getElementById("guessingNumber").value;
+  
+   if(x == y)
+   {    
+   
+       alert( "You have guessed the number " + x );
+   }
+   else
+   {
+       alert("Not a correct number please try again")
+       document.getElementById("guessingNumber").value=""
+   }
+}
+</script>
+</body>
+</html>     
